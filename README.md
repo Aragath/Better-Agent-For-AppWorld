@@ -14,4 +14,4 @@ Our approach involves the following stages:
 ## Results
 Our results show that the SFT model outperforms the baseline model and other trained models, achieving significant improvements in TGC and SGC. However, the RLHF models show limited improvements, and the SFT+RLHF approach does not outperform the standalone SFT model.
 
-![Performance Chart](./asset/Performance_comparison_conclusion.png)
+![Performance Chart](./assets/Performance_comparison_conclusion.png)
