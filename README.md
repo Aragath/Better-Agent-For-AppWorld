@@ -1,17 +1,55 @@
-# Better Agent For AppWorld
-This project aims to enhance the performance of autonomous agents in the AppWorld environment through reinforcement learning techniques and supervised fine-tuning. Our goal is to push the capabilities of autonomous agents beyond zero-shot limitations, leveraging powerful language models and user feedback to achieve improved task performance.
+# Better Agent for AppWorld
 
-## Introduction
-AppWorld is a robust, stable, and reproducible platform for agent interaction, providing a controllable execution environment where language models can interact with everyday applications via APIs. Our project utilizes the AppWorld Engine to generate API call-and-response pairs and evaluates the performance of our models on complex daily tasks.
+This project explores enhancing Large Language Model (LLM) performance in the AppWorld environment through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). We focus on improving agent performance beyond zero-shot capabilities using the AppWorld benchmark for complex API calls and interactive coding tasks.
 
-## Methodology
-Our approach involves the following stages:
+## Overview
 
-1. Supervised Fine-Tuning (SFT): We fine-tune a language model on a dataset of task instructions and desired outputs to improve its performance on specific tasks.
-2. Reinforcement Learning with Human Feedback (RLHF): We use human feedback to optimize the model's performance, exploring two strategies: Direct Preference Optimization (DPO) and Proximal Policy Optimization (PPO).
-3. Evaluation: We evaluate our models on the AppWorld benchmark, using two key metrics: Task Goal Completion (TGC) and Scenario Goal Completion (SGC).
+Our project implements and evaluates three main approaches:
+- Supervised Fine-Tuning (SFT)
+- Reinforcement Learning with Human Feedback (RLHF) using PPO
+- Reinforcement Learning with Human Feedback (RLHF) using DPO
+- Hybrid approaches combining SFT with PPO and DPO
 
-## Results
-Our results show that the SFT model outperforms the baseline model and other trained models, achieving significant improvements in TGC and SGC. However, the RLHF models show limited improvements, and the SFT+RLHF approach does not outperform the standalone SFT model.
+### Key Results
+
+- SFT model achieved significant improvements over the baseline:
+  - 6.6% Task Goal Completion (TGC)
+  - 1.8% Scenario Goal Completion (SGC)
+  - Best performance at Difficulty Level 1 with 15.8% TGC
+- RLHF models showed modest improvements:
+  - PPO: 1.8% aggregate TGC
+  - DPO: Limited success across metrics
+- Hybrid SFT+RL models performed below standalone SFT
 
 ![Performance Chart](./assets/Performance_comparison_conclusion.png)
+
+## Project Structure
+
+```
+├── data/
+│   ├── appworld_sft/
+│   └── appworld_rlhf/
+├── models/
+│   ├── sft/
+│   ├── reward/
+│   └── rlhf/
+├── evaluation/
+│   └── benchmark.py
+├── configs/
+│   ├── sft_config.yaml
+│   ├── reward_config.yaml
+│   └── rlhf_config.yaml
+└── readme.md
+```
+
+## Dataset
+
+Our dataset includes:
+- SFT Dataset: 446 curated instruction-response pairs
+- RLHF Dataset: 434 annotated preference pairs
+
+## Model Architecture
+
+Base Model: LLaMA-3.1 8B Instruct
+- Chosen for balanced scale and capability
+- Instruction-tuned variant optimized for interactive tasks
