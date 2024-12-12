@@ -32,13 +32,19 @@ Our project implements and evaluates three main approaches:
 ├── models/
 │   ├── sft/
 │   ├── reward/
-│   └── rlhf/
+│   ├── ppo/
+│   ├── dpo/
+│   ├── sft_ppo/
+│   └── sft_dpo/
 ├── evaluation/
 │   └── benchmark.py
 ├── configs/
 │   ├── sft_config.yaml
 │   ├── reward_config.yaml
-│   └── rlhf_config.yaml
+│   ├── ppo_config.yaml
+│   ├── dpo_config.yaml
+│   ├── sft_ppo_config.yaml
+│   └── sft_dpo_config.yaml
 └── README.md
 ```
 
