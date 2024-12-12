@@ -1,6 +1,6 @@
 # Better Agent for AppWorld
 
-This project explores enhancing Large Language Model (LLM) performance in the AppWorld environment through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). We focus on improving agent performance beyond zero-shot capabilities using the AppWorld benchmark for complex API calls and interactive coding tasks.
+This project explores enhancing Large Language Model (LLM) performance in the AppWorld environment through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). We focus on improving small scale agent (LLaMA-3.1 8B Instruct) performance beyond zero-shot capabilities using the AppWorld benchmark for complex API calls and interactive coding tasks.
 
 ## Overview
 
@@ -39,7 +39,7 @@ Our project implements and evaluates three main approaches:
 │   ├── sft_config.yaml
 │   ├── reward_config.yaml
 │   └── rlhf_config.yaml
-└── readme.md
+└── README.md
 ```
 
 ## Dataset
