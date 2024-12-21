@@ -22,6 +22,9 @@ Our project implements and evaluates three main approaches:
 - Hybrid SFT+RL models performed below standalone SFT
 
 ![Performance Chart](./assets/Performance_comparison_conclusion.png)
+![Performance by Difficulty1](./assets/Task%20Goal%20Completion%20by%20Model%20and%20Difficulty.png)
+![Performance by Difficulty2](./assets/Task%20Goal%20Completion%20by%20Model%20and%20Difficulty2.png)
+![Performance by Difficulty3](./assets/Task%20Goal%20Completion%20by%20Model%20and%20Difficulty3.png)
 
 ## Project Structure
 
@@ -45,6 +48,11 @@ Our project implements and evaluates three main approaches:
 │   ├── dpo_config.yaml
 │   ├── sft_ppo_config.yaml
 │   └── sft_dpo_config.yaml
+├── assets/
+│   └── Performance_comparison_conclusion.png
+│   └── Task Goal Completion by Model and Difficulty.png
+│   └── Task Goal Completion by Model and Difficulty2.png
+│   └── Task Goal Completion by Model and Difficulty3.png
 └── README.md
 ```
 
